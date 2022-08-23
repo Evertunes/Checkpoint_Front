@@ -14,5 +14,15 @@ formulario.appendChild(descricao);
 descricao.id = 'desc';
 document.getElementById('desc');
 
+formulario.appendChild(link);
+link.id = 'lk';
+document.getElementById('lk');
+
+formulario.appendChild(botao);
+botao.id = 'but';
+document.getElementById('but');
+
+botao.addEventListener();
+
 formulario.id = 'forms';
 document.getElementById('forms');
