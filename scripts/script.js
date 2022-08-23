@@ -18,7 +18,6 @@ document.getElementById('desc');
 formulario.appendChild(link);
 link.id = 'lk';
 document.getElementById('lk');
-link.setAttribute('src');
 
 formulario.appendChild(sabre);
 sabre.id = 'sb';
@@ -30,9 +29,9 @@ document.getElementById('but');
 
 function criarform2(){
     let card = document.createElement('div');
-    let tituloCard = document.getElementsById('titulof');
-    let imagem = document.getElementsById('lk');
-    let descricaoCard = document.getElementsById('desc');
+    let tituloCard = document.getElementsByClassName(titulo);
+    let imagem = document.getElementsByClassName(link);
+    let descricaoCard = document.getElementsByClassName(descricao);
 
     document.body.appendChild(card);
     card.id = 'card1';
@@ -41,7 +40,7 @@ function criarform2(){
     document.card.appendChild(descricaoCard);
 }
 
-botao.addEventListener(criarform2);
+botao.addEventListener(criarform2());
 
 formulario.id = 'forms';
 document.getElementById('forms');
