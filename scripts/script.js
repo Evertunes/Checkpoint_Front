@@ -8,6 +8,7 @@ let sabre = document.createElement('input');
 document.body.appendChild(formulario)
 
 formulario.appendChild(titulo);
+
 titulo.id = 'titulof';
 document.getElementById('titulof');
 
@@ -29,18 +30,20 @@ document.getElementById('but');
 
 function criarform2(){
     let card = document.createElement('div');
-    let tituloCard = document.getElementsByClassName(titulo);
-    let imagem = document.getElementsByClassName(link);
-    let descricaoCard = document.getElementsByClassName(descricao);
+    let tituloCard = document.createElement('div', () => document.getElementById("titulof").value);
+    let imagem = document.createElement('div', () => document.getElementById("lk").value);
+    let descricaoCard = document.createElement('div', () => document.getElementById("desc").value);
 
     document.body.appendChild(card);
     card.id = 'card1';
-    document.card.appendChild(tituloCard);
-    document.card.appendChild(imagem);
-    document.card.appendChild(descricaoCard);
+    card.appendChild(tituloCard);
+    card.appendChild(imagem);
+    card.appendChild(descricaoCard);
+
+    console.log("formulario criado");
 }
 
-botao.addEventListener(criarform2());
+formulario.addEventListener("submit",criarform2);
 
 formulario.id = 'forms';
 document.getElementById('forms');
