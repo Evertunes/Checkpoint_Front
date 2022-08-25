@@ -1,41 +1,49 @@
 let formulario = document.createElement('form');
 formulario.classList.toggle('formulario');
-let lbltitulo = document.createTextNode("Digite o nome do personagem: ");
-formulario.appendChild(lbltitulo);
 let titulo = document.createElement('input');
 titulo.classList.toggle('titulo');
-let descricao = document.createElement('input');
+let descricao = document.createElement('textarea');
 descricao.classList.toggle('descricao');
 let link = document.createElement('input');
 link.classList.toggle('link');
+let sabre = document.createElement('input');
+sabre.classList.toggle('sabre');
+formulario.appendChild(sabre);
 let botao = document.createElement('button');
 botao.classList.toggle('botao');
 let lbl = document.createTextNode("Enviar Dados");
 botao.appendChild(lbl);
-let sabre = document.createElement('input');
-sabre.classList.toggle('sabre');
-document.body.appendChild(formulario)
+
+document.body.appendChild(formulario);
 
 formulario.id = 'forms';
 document.getElementById('forms');
 
+let lbltitulo = document.createTextNode("Digite o nome do personagem: ");
+formulario.appendChild(lbltitulo);
 formulario.appendChild(titulo);
 
 titulo.id = 'titulof';
 titulo.setAttribute("required",true)
 document.getElementById('titulof');
 
+let lbltituloDesc = document.createTextNode("Digite a descrição do personagem: ");
+formulario.appendChild(lbltituloDesc);
 formulario.appendChild(descricao);
 descricao.id = 'desc';
 descricao.setAttribute("required",true);
 
 document.getElementById('desc');
 
+let lbltituloLink = document.createTextNode("Insira a URL da imagem: ");
+formulario.appendChild(lbltituloLink);
 formulario.appendChild(link);
 link.id = 'lk';
 link.setAttribute("required",true);
 document.getElementById('lk');
 
+let lbltituloSabre = document.createTextNode("Cor do Sabre: ");
+formulario.appendChild(lbltituloSabre);
 formulario.appendChild(sabre);
 sabre.id = 'sb';
 sabre.setAttribute("required",true);

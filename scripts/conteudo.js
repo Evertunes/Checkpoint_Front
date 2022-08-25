@@ -4,7 +4,7 @@ const info = [
     descric: 'Darth Vader (anteriormente chamado Anakin Skywalker) é um personagem  da saga de ficção científica Star Wars ; um dos protagonistas centrais da trama que começa no lado da luz mas é corrompido pro lado sombrio',
     afiliacao: 'darth vader -- ordem sith, império galáctico',
     cordosabre: 'darth vader -- vermelho',
-    img: 'darth vader -- https://www.hdwallpaperslife.com/wp-content/uploads/2019/04/new-darth-vader-3z-1680x1050.jpg'
+    imgC: 'darth vader -- https://www.hdwallpaperslife.com/wp-content/uploads/2019/04/new-darth-vader-3z-1680x1050.jpg'
 },
 
 {
@@ -12,7 +12,7 @@ const info = [
     descric: 'Luke Skywalker é o protagonista da trilogia original da série Star Wars, Um personagem essencial e importante na luta da Aliança Rebelde contra o Império Galáctico sendo um dos últimos jedis existentes',
     afiliacao: 'luke skywalker -- ordem jedi',
     cordosabre: 'luke skywalker -- verde',
-    img: 'luke skywalker -- https://wallpapercave.com/wp/wp3800518.jpg'
+    imgC: 'luke skywalker -- https://wallpapercave.com/wp/wp3800518.jpg'
 },
 
 {
@@ -20,7 +20,7 @@ const info = [
     descric: 'Darth Maul é um Zabrak do planeta Dathomir no universo fictício de Star Wars. Os chifres são a marca registrada de todos os Zabraks, com a face tatuada em vermelho e preto sua aparência é maléfica, ele possui o medo como aliado, Implacável e próximo da perfeição',
     afiliacao: 'darth maul -- ordem sith',
     cordosabre: 'darth maul --  vermelho',
-    img: 'darth maul --  https://wallpapertag.com/wallpaper/full/1/2/0/374617-darth-maul-wallpaper-2481x1520-for-ipad.jpg'
+    imgC: 'darth maul --  https://wallpapertag.com/wallpaper/full/1/2/0/374617-darth-maul-wallpaper-2481x1520-for-ipad.jpg'
 },
 
 {
@@ -28,7 +28,7 @@ const info = [
     descric: 'Obi-Wan Kenobi é um personagem fictício da saga de ficção científica Star Wars, que participou dos seis primeiros filmes, é um dos poucos personagens da série a aparecer nos seis primeiros episódios, dada a sua importância no enredo',
     afiliacao: 'obi-wan kenobi -- ordem jedi, república galáctica',
     cordosabre: 'obi-wan kenobi -- azul',
-    img: 'obi-wan kenobi -- https://superherobrasil.com.br/wp-content/uploads/2019/08/Obi-Wan-Kenobi.jpg'
+    imgC: 'obi-wan kenobi -- https://superherobrasil.com.br/wp-content/uploads/2019/08/Obi-Wan-Kenobi.jpg'
 },
 
 {
@@ -36,7 +36,7 @@ const info = [
     descric: 'Darth Sidious é o principal antagonista da franquia Star Wars (mais especificamente da Saga Skywalker), tendo sido o principal vilão na trilogia prequel, um dos dois principais junto com Darth Vader na trilogia original e um dos dois principais, juntamente com Kylo Ren, na trilogia de sequência',
     afiliacao: 'darth sidius -- ordem sith, império galáctico',
     cordosabre: 'darth sidius -- vermelho',
-    img: 'darth sidius -- https://images.saymedia-content.com/.image/t_share/MTc1MTEwOTE1NTg5NjEyNjM5/five-unsolved-star-wars-mysteries.jpg'
+    imgC: 'darth sidius -- https://images.saymedia-content.com/.image/t_share/MTc1MTEwOTE1NTg5NjEyNjM5/five-unsolved-star-wars-mysteries.jpg'
 },
 
 {
@@ -44,6 +44,38 @@ const info = [
     descric: 'Yoda é um membro de uma espécie de nome desconhecido. Ele foi o Grão Mestre da Ordem Jedi durante as Guerras Clônicas, um dos membros mais importantes do Alto Conselho Jedi nos últimos dias da República Galáctica, e um dos mais sábios e poderosos Jedi de todos os tempos.',
     afiliacao: 'mestre yoda -- ordem jedi, república galáctica',
     cordosabre: 'mestre yoda -- verde',
-    img: 'mestre yoda -- https://townsquare.media/site/442/files/2012/04/Yoda.jpg?w=1200&h=0&zc=1&s=0&a=t&q=89'
+    imgC: 'mestre yoda -- https://townsquare.media/site/442/files/2012/04/Yoda.jpg?w=1200&h=0&zc=1&s=0&a=t&q=89'
 }, 
 ];
+
+var containerPai = document.createElement('section');
+var nomeCard = document.createElement('h2');
+var descricaoCard = document.createElement('p');
+var afiliacaoCard = document.createElement('p');
+var cordosabreCard = document.createElement('p');
+var imagemCard = document.createElement('img');
+
+
+function criaCard(){
+
+    for(const criar of info){
+        containerPai.appendChild(nomeCard,descricaoCard, afiliacaoCard, cordosabreCard,imagemCard)
+        document.body.appendChild(containerPai);
+    }
+};
+
+function preencher(nome,descric,afiliacao,cordosabre,imgC){
+    for(const dadosConteudo of info){
+        let tit = document.querySelector("nomeCard")
+        tit.setAttribute("nome")
+        let desc = document.querySelector("descricaoCard")
+        desc.setAttribute("descic")
+        let af = document.querySelector("afiliacaoCard")
+        af.setAttribute("afiliacao")
+        let cors = document.querySelector("cordosabreCard")
+        cors.setAttribute("cordosabre")
+        let im = document.querySelector("imagemCard")
+        im.setAttribute("imgC")
+    }
+}
+
