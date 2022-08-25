@@ -44,6 +44,22 @@ let card = document.createElement('section');
 card.id = 'cards'
 document.body.appendChild(card);
 
+handleReset = () => {
+    Array.from(document.querySelectorAll("#titulof")).forEach(
+      input => (input.value = "")
+    );
+    Array.from(document.querySelectorAll("#desc")).forEach(
+        input => (input.value = "")
+      );
+      Array.from(document.querySelectorAll("#lk")).forEach(
+        input => (input.value = "")
+      );
+      
+      Array.from(document.querySelectorAll("#sb")).forEach(
+        input => (input.value = "")
+      );
+  };
+
 formulario.addEventListener("submit", (evento) => {
     
 evento.preventDefault()
@@ -59,6 +75,8 @@ evento.preventDefault()
     document.getElementById("cards").innerHTML += tituloCard;
 
     event.preventDefault()
+
+    handleReset();
     
 });
 
