@@ -22,18 +22,23 @@ document.getElementById('forms');
 formulario.appendChild(titulo);
 
 titulo.id = 'titulof';
+titulo.setAttribute("required",true)
 document.getElementById('titulof');
 
 formulario.appendChild(descricao);
 descricao.id = 'desc';
+descricao.setAttribute("required",true);
+
 document.getElementById('desc');
 
 formulario.appendChild(link);
 link.id = 'lk';
+link.setAttribute("required",true);
 document.getElementById('lk');
 
 formulario.appendChild(sabre);
 sabre.id = 'sb';
+sabre.setAttribute("required",true);
 document.getElementById('sb');
 
 formulario.appendChild(botao);
@@ -43,22 +48,6 @@ document.getElementById('but');
 let card = document.createElement('section');
 card.id = 'cards'
 document.body.appendChild(card);
-
-handleReset = () => {
-    Array.from(document.querySelectorAll("#titulof")).forEach(
-      input => (input.value = "")
-    );
-    Array.from(document.querySelectorAll("#desc")).forEach(
-        input => (input.value = "")
-      );
-      Array.from(document.querySelectorAll("#lk")).forEach(
-        input => (input.value = "")
-      );
-      
-      Array.from(document.querySelectorAll("#sb")).forEach(
-        input => (input.value = "")
-      );
-  };
 
 formulario.addEventListener("submit", (evento) => {
     
@@ -73,11 +62,10 @@ evento.preventDefault()
     <span>"${sabre.value}"</span>
     `
     document.getElementById("cards").innerHTML += tituloCard;
-
-    event.preventDefault()
-
-    handleReset();
-    
+    link.value = null
+    titulo.value = null
+    descricao.value = null
+    sabre.value = null
 });
 
 /*botao.addEventListener('submit',function criar1(){
