@@ -67,8 +67,3 @@ evento.preventDefault()
     descricao.value = null
     sabre.value = null
 });
-
-/*botao.addEventListener('submit',function criar1(){
-    console.log("Formulario Criado");
-    criar1.preventDefault();
-    criarform2(formulario,titulo,descricao,link,sabre)});*/
