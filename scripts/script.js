@@ -1,10 +1,19 @@
 let formulario = document.createElement('form');
+formulario.classList.toggle('formulario');
+let lbltitulo = document.createTextNode("Digite o nome do personagem: ");
+formulario.appendChild(lbltitulo);
 let titulo = document.createElement('input');
+titulo.classList.toggle('titulo');
 let descricao = document.createElement('input');
-let link = document.createElement('img');
+descricao.classList.toggle('descricao');
+let link = document.createElement('input');
+link.classList.toggle('link');
 let botao = document.createElement('button');
+botao.classList.toggle('botao');
+let lbl = document.createTextNode("Enviar Dados");
+botao.appendChild(lbl);
 let sabre = document.createElement('input');
-
+sabre.classList.toggle('sabre');
 document.body.appendChild(formulario)
 
 formulario.id = 'forms';
@@ -31,21 +40,27 @@ formulario.appendChild(botao);
 botao.id = 'but';
 document.getElementById('but');
 
+let card = document.createElement('section');
+card.id = 'cards'
+document.body.appendChild(card);
 
-botao.addEventListener("click",function criarform2(){
-  
-    let card = document.createElement('div');
-    let tituloCard = document.createElement('div', () => document.getElementById("titulof").value);
-    let imagem = document.createElement('div', () => document.getElementById("lk").value);
-    let descricaoCard = document.createElement('div', () => document.getElementById("desc").value);
+formulario.addEventListener("submit", (evento) => {
+    
+evento.preventDefault()
 
-    document.body.appendChild(card);
-    card.id = 'card1';
-    card.appendChild(tituloCard);
-    card.appendChild(imagem);
-    card.appendChild(descricaoCard);
-},
-);
+    console.log("formulario enviado");
+
+    let tituloCard = `
+    <img src="${link.value}"/>
+    <span>"${titulo.value}"</span>
+    <span>"${descricao.value}"</span>
+    <span>"${sabre.value}"</span>
+    `
+    document.getElementById("cards").innerHTML += tituloCard;
+
+    event.preventDefault()
+    
+});
 
 /*botao.addEventListener('submit',function criar1(){
     console.log("Formulario Criado");
