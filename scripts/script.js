@@ -1,3 +1,5 @@
+import { criaCard, preencher } from "./conteudo.js";
+
 let formulario = document.createElement('form');
 formulario.classList.toggle('formulario');
 let titulo = document.createElement('input');
@@ -13,6 +15,10 @@ let botao = document.createElement('button');
 botao.classList.toggle('botao');
 let lbl = document.createTextNode("Enviar Dados");
 botao.appendChild(lbl);
+let botaoComplete = document.createElement('button');
+botaoComplete.classList.toggle('botaoComplete');
+let lblComplete = document.createTextNode("Auto completar");
+botaoComplete.appendChild(lblComplete);
 
 document.body.appendChild(formulario);
 
@@ -53,6 +59,14 @@ formulario.appendChild(botao);
 botao.id = 'but';
 document.getElementById('but');
 
+document.body.appendChild(botaoComplete);
+botaoComplete.addEventListener('click', () => {
+
+    criaCard();
+    preencher();
+
+});
+
 let card = document.createElement('section');
 card.id = 'cards'
 document.body.appendChild(card);
@@ -75,3 +89,4 @@ evento.preventDefault()
     descricao.value = null
     sabre.value = null
 });
+
