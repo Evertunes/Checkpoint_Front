@@ -71,7 +71,6 @@ function criaCard(){
     
 function preencher(){
         for(const dadosConteudo of info){
-<<<<<<< HEAD
            
             console.log("formulario enviado");
 
@@ -87,17 +86,3 @@ function preencher(){
     };
 
 export { criaCard, preencher };
-=======
-            let tit = document.querySelector("nomeCard")
-            tit.setAttribute("nome")
-            let desc = document.querySelector("descricaoCard")
-            desc.setAttribute("descic")
-            let af = document.querySelector("afiliacaoCard")
-            af.setAttribute("afiliacao")
-            let cors = document.querySelector("cordosabreCard")
-            cors.setAttribute("cordosabre")
-            let im = document.querySelector("imagemCard")
-            im.setAttribute("imgC")
-        }
-    }
->>>>>>> e7e6946ae227c577e1de19a51b7ab33064169b5b

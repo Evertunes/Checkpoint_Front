@@ -13,10 +13,6 @@ sabre.classList.toggle('sabre');
 formulario.appendChild(sabre);
 let botao = document.createElement('button');
 botao.classList.toggle('botao');
-
-let botaoPreencher = document.createElement('button');
-botaoPreencher.classList.toggle('botao');
-
 let lbl = document.createTextNode("Enviar Dados");
 botao.appendChild(lbl);
 let botaoComplete = document.createElement('button');
@@ -63,7 +59,6 @@ formulario.appendChild(botao);
 botao.id = 'but';
 document.getElementById('but');
 
-<<<<<<< HEAD
 document.body.appendChild(botaoComplete);
 botaoComplete.addEventListener('click', () => {
 
@@ -75,8 +70,6 @@ botaoComplete.addEventListener('click', () => {
 let card = document.createElement('section');
 card.id = 'cards'
 document.body.appendChild(card);
-=======
->>>>>>> e7e6946ae227c577e1de19a51b7ab33064169b5b
 
 formulario.addEventListener("submit", (evento) => {
     
@@ -96,35 +89,3 @@ evento.preventDefault()
     descricao.value = null
     sabre.value = null
 });
-
-<<<<<<< HEAD
-=======
-botaoPreencher.id = 'botaoPreencher';
-document.getElementById('botaoPreencher');
-let botaoPreencherDados = document.createTextNode("Preencher Automaticamente");
-botaoPreencher.appendChild(botaoPreencherDados);
-
-let bloco = document.createElement('section');
-formulario.appendChild(botaoPreencher);
-
-botaoPreencher.addEventListener("click", (evento) => {
-    
-    evento.preventDefault()
-    
-        console.log("teste");
-    
-        
-        let tituloCard = `
-        <img src="${link.value}"/>
-        <span>"${titulo.value}"</span>
-        <span>"${descricao.value}"</span>
-        <span>"${sabre.value}"</span>
-        `
-        document.getElementById("cards").innerHTML += tituloCard;
-    });
-
-    
-let card = document.createElement('section');
-card.id = 'cards'
-document.body.appendChild(card);
->>>>>>> e7e6946ae227c577e1de19a51b7ab33064169b5b
