@@ -1,4 +1,3 @@
-require('./conteudo')
 let formulario = document.createElement('form');
 formulario.classList.toggle('formulario');
 let titulo = document.createElement('input');
