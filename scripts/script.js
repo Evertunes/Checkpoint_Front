@@ -2,6 +2,8 @@ import { criaCard, preencher } from "./conteudo.js";
 
 let formulario = document.createElement('form');
 formulario.classList.toggle('formulario');
+let personagem = document.createElement('h1');
+personagem.classList.toggle('personagem');
 let titulo = document.createElement('input');
 titulo.classList.toggle('titulo');
 let descricao = document.createElement('textarea');
@@ -25,7 +27,12 @@ document.body.appendChild(formulario);
 formulario.id = 'forms';
 document.getElementById('forms');
 
+let personagemText = document.createTextNode("Personagem");
+personagem.appendChild(personagemText);
+formulario.appendChild(personagem); 
+
 let lbltitulo = document.createTextNode("Digite o nome do personagem: ");
+lbltitulo.id = "lbtitulo";
 formulario.appendChild(lbltitulo);
 formulario.appendChild(titulo);
 
