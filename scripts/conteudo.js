@@ -39,13 +39,13 @@ const info = [
   },
 
   {
-    nome: "Darth Sirius",
+    nome: "Darth Sidious",
     descricao:
       "Darth Sidious é o principal antagonista da franquia Star Wars (mais especificamente da Saga Skywalker), tendo sido o principal vilão na trilogia prequel, um dos dois principais junto com Darth Vader na trilogia original e um dos dois principais, juntamente com Kylo Ren, na trilogia de sequência",
     afiliacao: "ordem sith, império galáctico",
     corDoSabre: "vermelho",
     image:
-      "https://images.saymedia-content.com/.image/t_share/MTc1MTEwOTE1NTg5NjEyNjM5/five-unsolved-star-wars-mysteries.jpg",
+      "https://www.tvgroove.com/wp-content/uploads/2020/07/darthsidius.jpg",
   },
 
   {
