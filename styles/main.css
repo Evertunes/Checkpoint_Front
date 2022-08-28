@@ -19,11 +19,8 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-color: var(--corFundoBody);
-  color: var(--corPrincipal)
+  color: var(--corPrincipal);
 }
 
 a {
@@ -31,10 +28,11 @@ a {
   color: var(principal);
 }
 
-h1{
-margin-left: 25px;
-font-size: 5rem;
-color: var(--corPrincipal);
+h1 {
+  text-align: center;
+  margin-left: 25px;
+  font-size: 5rem;
+  color: var(--corPrincipal);
 }
 
 footer {
@@ -113,17 +111,13 @@ footer h4 {
 /* Para telas de tamanhos menores, responsividade */
 
 @media (max-width: 1366px) {
- 
 }
 
 @media (max-width: 1280px) {
-  
 }
 
 @media (max-width: 768px) {
-  
 }
 
 @media (max-width: 428px) {
-  
 }
