@@ -57,22 +57,27 @@ const infoPersonagens = [
 /* 
     
     var containerPai = document.createElement('section');
-    var nomeCard = document.createElement('h2');
+    containerPai.id = "cardsp"
+    var nomeCard = document.createElement('p');
     var descricaoCard = document.createElement('p');
     var afiliacaoCard = document.createElement('p');
     var cordosabreCard = document.createElement('p');
     var imagemCard = document.createElement('img');
     
-    
-    function criaCard(){
+function criaCard(){
     
         for(const criar of info){
+           
+           
             containerPai.appendChild(nomeCard,descricaoCard, afiliacaoCard, cordosabreCard,imagemCard)
             document.body.appendChild(containerPai);
+
         }
     };
+
+
     
-    function preencher(nome,descric,afiliacao,cordosabre,imgC){
+function preencher(){
         for(const dadosConteudo of info){
             let tit = document.querySelector("nomeCard")
             tit.setAttribute("nome")
