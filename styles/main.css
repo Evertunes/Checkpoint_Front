@@ -45,9 +45,10 @@ section {
   
 }
  
-.mb-3 {
-width:100%;
+#formulario{
+  width: 50%;
 }
+
 
 .card{
   width: 30%;
@@ -63,9 +64,19 @@ width:100%;
 
 .card-descricao {
   font-size: 1.8rem;
+  text-align: justify;
+  padding: 20px;
 }
 
-.card-cor-sabre {}
+.card-cor-sabre {
+  font-family: 1.8rem;
+  padding-left: 20px;
+}
+
+.card-afiliacao{
+  padding: 20px;
+}
+
 
 footer {
   width: 100%;
