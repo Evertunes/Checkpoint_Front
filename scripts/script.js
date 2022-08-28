@@ -31,7 +31,7 @@ formulario.addEventListener("submit", (evento) => {
   inputNomePersonagem.value = null;
   inputUrlImagem.value = null;
   inputDescricaoPersonagem.value = null;
-  inputCorSabre.value = null;
+  inputCorSabre.value = "";
   inputAfiliacaoPersonagem.value = null;
 });
 
@@ -60,7 +60,7 @@ Clique em Limpar cards ou recarregue a página.
 
 // limpa cards gerados
 botaoLimpar.addEventListener("click", () => {
-  personagemContainercard.remove();
+  personagemContainercard.innerHTML = '';
 });
 
 // array
