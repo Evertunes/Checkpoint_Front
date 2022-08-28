@@ -13,6 +13,7 @@ const personagemContainercard = document.getElementById(
   "personagem-containercard"
 );
 const botaoPreencher = document.getElementById("botao-preencher");
+const botaoLimpar = document.getElementById("botao-limpar");
 
 // cria os cards com as informações do formulário
 formulario.addEventListener("submit", (evento) => {
@@ -35,9 +36,8 @@ formulario.addEventListener("submit", (evento) => {
 });
 
 // cria os cards automaticamente com as informações do array
-botaoPreencher.addEventListener("click", (evento) => {
-  evento.preventDefault();
-  console.log(infoPersonagens[1].nome);
+botaoPreencher.addEventListener("click", () => {
+if(personagemContainercard.querySelector(".card") === null){
   infoPersonagens.forEach((number) => {
     let dadosPersonagem = `
     <div class="card">
@@ -49,7 +49,18 @@ botaoPreencher.addEventListener("click", (evento) => {
       </div>
       `;
     personagemContainercard.innerHTML += dadosPersonagem;
-  });
+  }); 
+}
+else {
+alert(`Cards já inseridos!
+Clique em Limpar cards ou recarregue a página.
+`)
+}
+});
+
+// limpa cards gerados
+botaoLimpar.addEventListener("click", () => {
+  personagemContainercard.remove();
 });
 
 // array
