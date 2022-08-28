@@ -18,7 +18,18 @@ const botaoLimpar = document.getElementById("botao-limpar");
 // cria os cards com as informações do formulário
 formulario.addEventListener("submit", (evento) => {
   evento.preventDefault();
-  let dadosPersonagem = `
+  let dadosPersonagem
+  if (inputAfiliacaoPersonagem.value ===''){
+  dadosPersonagem = `
+  <div class="card">
+    <h2 class="card-nome">${inputNomePersonagem.value}</h2>
+    <img class="card-imagem" src="${inputUrlImagem.value}" alt="imagem do personagem"/>
+    <p class="card-descricao">${inputDescricaoPersonagem.value}</p>
+    <h3 class="card-cor-sabre">Utiliza um sabre ${inputCorSabre.value}</h3>
+    </div>
+    `; }
+else {
+  dadosPersonagem = `
   <div class="card">
     <h2 class="card-nome">${inputNomePersonagem.value}</h2>
     <img class="card-imagem" src="${inputUrlImagem.value}" alt="imagem do personagem"/>
@@ -27,6 +38,7 @@ formulario.addEventListener("submit", (evento) => {
     <h3 class="card-afiliacao">Pertence a ${inputAfiliacaoPersonagem.value}</h3>
     </div>
     `;
+}
   personagemContainercard.innerHTML += dadosPersonagem;
   inputNomePersonagem.value = null;
   inputUrlImagem.value = null;
@@ -52,8 +64,8 @@ if(personagemContainercard.querySelector(".card") === null){
   }); 
 }
 else {
-alert(`Cards já inseridos!
-Clique em Limpar cards ou recarregue a página.
+alert(`Card(s) já inserido(s)!
+Clique em "Limpar Cards" ou recarregue a página.
 `)
 }
 });
