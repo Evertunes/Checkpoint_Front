@@ -70,12 +70,12 @@ Clique em "Limpar Cards" ou recarregue a página.
 }
 });
 
-// limpa cards gerados
+// limpa os cards gerados
 botaoLimpar.addEventListener("click", () => {
   personagemContainercard.innerHTML = '';
 });
 
-// array
+// array utilizados nos cards gerados automaticamente
 const infoPersonagens = [
   {
     nome: "Darth Vader",
