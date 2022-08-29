@@ -64,7 +64,7 @@ if(personagemContainercard.querySelector(".card-auto") === null){
   }); 
 }
 else {
-alert(`Card(s) Automáticos já inserido(s)!
+alert(`Cards automáticos já gerados!
 Clique em "Limpar Cards" ou recarregue a página.
 `)
 }
