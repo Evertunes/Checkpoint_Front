@@ -21,6 +21,7 @@ html {
 body {
   background-color: var(--corFundoBody);
   color: var(--corPrincipal);
+  transition: background 0.2 linear;
 }
 
 a {
@@ -46,6 +47,11 @@ section {
 
 #formulario {
   width: 50%;
+}
+
+#pesonagem-containercard{
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .card {
