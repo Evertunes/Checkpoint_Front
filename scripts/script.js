@@ -49,10 +49,10 @@ else {
 
 // cria os cards automaticamente com as informações do array
 botaoPreencher.addEventListener("click", () => {
-if(personagemContainercard.querySelector(".card") === null){
+if(personagemContainercard.querySelector(".card-auto") === null){
   infoPersonagens.forEach((number) => {
     let dadosPersonagem = `
-    <div class="card">
+    <div class="card card-auto">
       <h2 class="card-nome">${number.nome}</h2>
       <img class="card-imagem" src="${number.image}" alt="imagem do personagem"/>
       <p class="card-descricao">${number.descricao}</p>
@@ -64,7 +64,7 @@ if(personagemContainercard.querySelector(".card") === null){
   }); 
 }
 else {
-alert(`Card(s) já inserido(s)!
+alert(`Card(s) Automáticos já inserido(s)!
 Clique em "Limpar Cards" ou recarregue a página.
 `)
 }
@@ -72,7 +72,11 @@ Clique em "Limpar Cards" ou recarregue a página.
 
 // limpa os cards gerados
 botaoLimpar.addEventListener("click", () => {
-  personagemContainercard.innerHTML = '';
+  if(personagemContainercard.querySelector(".card") === null){
+    alert(`Não há nenhum card gerado.`)
+  }
+  else{
+  personagemContainercard.innerHTML = '';}
 });
 
 // array utilizados nos cards gerados automaticamente
