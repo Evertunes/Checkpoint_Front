@@ -1,5 +1,5 @@
 // variáveis
-const principal = document.querySelector("body")
+const principal = document.querySelector("body");
 const formulario = document.getElementById("formulario");
 const inputNomePersonagem = document.getElementById("input-nome-personagem");
 const inputUrlImagem = document.getElementById("input-url-imagem");
@@ -19,18 +19,18 @@ const botaoLimpar = document.getElementById("botao-limpar");
 // cria os cards com as informações do formulário
 formulario.addEventListener("submit", (evento) => {
   evento.preventDefault();
-  let dadosPersonagem
-  if (inputAfiliacaoPersonagem.value ===''){
-  dadosPersonagem = `
+  let dadosPersonagem;
+  if (inputAfiliacaoPersonagem.value === "") {
+    dadosPersonagem = `
   <div class="card">
     <h2 class="card-nome">${inputNomePersonagem.value}</h2>
     <img class="card-imagem" src="${inputUrlImagem.value}" alt="imagem do personagem"/>
     <p class="card-descricao">${inputDescricaoPersonagem.value}</p>
     <h3 class="card-cor-sabre">Utiliza um sabre ${inputCorSabre.value}</h3>
     </div>
-    `; }
-else {
-  dadosPersonagem = `
+    `;
+  } else {
+    dadosPersonagem = `
   <div class="card">
     <h2 class="card-nome">${inputNomePersonagem.value}</h2>
     <img class="card-imagem" src="${inputUrlImagem.value}" alt="imagem do personagem"/>
@@ -39,48 +39,47 @@ else {
     <h3 class="card-afiliacao">Pertence a ${inputAfiliacaoPersonagem.value}</h3>
     </div>
     `;
-}
+  }
   personagemContainercard.innerHTML += dadosPersonagem;
   inputNomePersonagem.value = null;
   inputUrlImagem.value = null;
   inputDescricaoPersonagem.value = null;
   inputCorSabre.value = "";
   inputAfiliacaoPersonagem.value = null;
-  personagemContainercard.scrollIntoView()
+  personagemContainercard.scrollIntoView();
 });
 
 // cria os cards automaticamente com as informações do array
 botaoPreencher.addEventListener("click", () => {
-if(personagemContainercard.querySelector(".card-auto") === null){
-  infoPersonagens.forEach((number) => {
-    let dadosPersonagem = `
+  if (personagemContainercard.querySelector(".card-auto") === null) {
+    infoPersonagens.forEach((array) => {
+      let dadosPersonagem = `
     <div class="card card-auto">
-      <h2 class="card-nome">${number.nome}</h2>
-      <img class="card-imagem" src="${number.image}" alt="imagem do personagem"/>
-      <p class="card-descricao">${number.descricao}</p>
-      <h3 class="card-cor-sabre">- Utiliza um sabre ${number.corDoSabre}</h3>
-      <h3 class="card-afiliacao">- Pertence a ${number.afiliacao}</h3>
+      <h2 class="card-nome">${array.nome}</h2>
+      <img class="card-imagem" src="${array.image}" alt="imagem do personagem"/>
+      <p class="card-descricao">${array.descricao}</p>
+      <h3 class="card-cor-sabre" id='cdm'>- Utiliza um sabre ${array.corDoSabre}</h3>
+      <h3 class="card-afiliacao">- Pertence a ${array.afiliacao}</h3>
       </div>
       `;
-    personagemContainercard.innerHTML += dadosPersonagem;
-  }); 
-}
-else {
-alert(`Cards automáticos já gerados!
+      personagemContainercard.innerHTML += dadosPersonagem;
+    });
+  } else {
+    alert(`Cards automáticos já gerados!
 Clique em "Limpar Cards" ou recarregue a página.
-`)
-}
-personagemContainercard.scrollIntoView()
+`);
+  }
+  personagemContainercard.scrollIntoView();
 });
 
 // limpa os cards gerados
 botaoLimpar.addEventListener("click", () => {
-  if(personagemContainercard.querySelector(".card") === null){
-    alert(`Não há nenhum card gerado.`)
+  if (personagemContainercard.querySelector(".card") === null) {
+    alert(`Não há nenhum card gerado.`);
+  } else {
+    personagemContainercard.innerHTML = "";
   }
-  else{
-  personagemContainercard.innerHTML = '';}
-  principal.scrollIntoView()
+  principal.scrollIntoView();
 });
 
 // array utilizados nos cards gerados automaticamente
