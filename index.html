@@ -17,35 +17,35 @@
 
 <body class="dark">
   <main>
-    <h1>Gerador de Cards dos Personagens de Star Wars</h1> 
-    <div> 
-      <input type="checkbox" class="checkbox" id="ch"> 
+    <div id="dark-mode">
+      <input type="checkbox" class="checkbox" id="ch">
       <label class="label" for="ch">
         <i class="bi bi-brightness-high-fill"></i>
         <i class="bibi bi-moon-fill"></i>
         <div class="ball"></div>
       </label>
-    </div>                                                                                                                                                                                                                                                                                                
+    </div>
+    <h1>Gerador de Cards dos Personagens de Star Wars</h1>
     <section>
       <form id="formulario">
         <div class="mb-3">
-          <label for="input-nome-personagem">Nome</label>
-          <input type="text" id="input-nome-personagem" autocomplete="on" class="form-control"
+          <label class="etiqueta" for="input-nome-personagem">Nome</label>
+          <input type="text" id="input-nome-personagem" autocomplete="on" class="form-control form-control-lg"
             placeholder="Digite o nome do personagem" required>
         </div>
         <div class="mb-3">
-          <label for="input-url-imagem">Imagem</label>
-          <input type="url" id="input-url-imagem" autocomplete="off" class="form-control"
+          <label class="etiqueta" for="input-url-imagem">Imagem</label>
+          <input type="url" id="input-url-imagem" autocomplete="off" class="form-control form-control-lg"
             placeholder="Digite a url da imagem do personagem" required>
         </div>
         <div class="mb-3">
-          <label for="input-descricao-personagem">Descrição</label>
-          <textarea id="input-descricao-personagem" class="form-control" placeholder="Digite a descrição do personagem"
+          <label class="etiqueta" for="input-descricao-personagem">Descrição</label>
+          <textarea id="input-descricao-personagem" class="form-control form-control-lg" placeholder="Digite a descrição do personagem"
             required></textarea>
         </div>
         <div class="mb-3">
-          <label for="input-cor-sabre">Cor do Sabre</label>
-          <select id="input-cor-sabre" class="form-control" required>
+          <label class="etiqueta" for="input-cor-sabre">Cor do Sabre</label>
+          <select id="input-cor-sabre" class="form-control form-control-lg" required>
             <option value="">Selecione uma cor do sabre de luz</option>
             <option value="amarelo">Amarelo</option>
             <option value="azul">Azul</option>
@@ -60,23 +60,25 @@
           </select>
         </div>
         <div class="mb-3">
-          <label for="input-afiliacao-personagem">Afiliação</label>
-          <input type="text" id="input-afiliacao-personagem" autocomplete="on" class="form-control"
+          <label class="etiqueta" for="input-afiliacao-personagem">Afiliação</label>
+          <input type="text" id="input-afiliacao-personagem" autocomplete="on" class="form-control form-control-lg"
             placeholder="Digite a afiliação do personagem(opcional)">
         </div>
-        <button type="submit" id="botao-submit" class="btn btn-primary">
-          Enviar Dados
-        </button>
-        <button type="button" id="botao-preencher" class="btn btn-primary">
-          Gerar Cards Automaticamente
-        </button>
-        <button type="button" id="botao-limpar" class="btn btn-danger">
-          Limpar Cards
-        </button>
+        <div class="botoes">
+          <button type="submit" id="botao-submit" class="btn btn-primary btn-lg">
+            Enviar Dados
+          </button>
+          <button type="button" id="botao-preencher" class="btn btn-primary btn-lg">
+            Gerar Cards Automaticamente
+          </button>
+          <button type="button" id="botao-limpar" class="btn btn-danger btn-lg">
+            Limpar Cards
+          </button>
+        </div>
       </form>
     </section>
-      <section id="personagem-containercard">
-      </section>
+    <section id="personagem-containercard">
+    </section>
   </main>
   <footer>
     <section class="criadores">

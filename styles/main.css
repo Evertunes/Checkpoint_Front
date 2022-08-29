@@ -29,11 +29,16 @@ a {
   color: var(principal);
 }
 
+#dark-mode {
+  padding: 20px;
+}
+
 h1 {
   text-align: center;
   margin-left: 25px;
   font-size: 5rem;
   color: var(--corPrincipal);
+  margin-bottom: 20px;
 }
 
 section {
@@ -47,11 +52,23 @@ section {
 
 #formulario {
   width: 50%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.etiqueta{
+  font-size: 1.5rem;
+}
+
+.botoes{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
 }
 
 .card {
   width: 28%;
-  height: 600px;
+  height: 700px;
   margin: 25px;
   box-shadow: 0 0 25px black;
   background-color: rgb(219, 216, 216);
@@ -60,7 +77,7 @@ section {
 
 .card-imagem {
   width: 95%;
-  height: 50%;
+  height: 300px;
   align-self: center;
   border-radius: 10px;
 }
@@ -70,6 +87,8 @@ section {
 }
 
 .card-descricao {
+  width: 95%;
+  height: 230px;
   font-size: 1.6rem;
   text-align: justify;
   padding-top: 20px;
@@ -92,16 +111,17 @@ footer {
   width: 100%;
   background-color: var(--cor-fundo-header-footer);
   color: var(--cor-principal);
-  height: 364px;
+  height: 180px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 40px;
+  padding: 20px 100px;
+  margin-top: 50px;
 }
 
 .criadores {
-  width: 100%;
+  width: 70%;
   height: 80%;
   display: flex;
   justify-content: space-between;
@@ -129,16 +149,16 @@ footer {
 }
 
 .aluno h5 {
-  font-size: 2.4rem;
+  font-size: 1.5rem;
   color: var(--cor-principal);
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 
 .aluno p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: var(--texto-semi-transparente);
-  margin-bottom: 12px;
-  min-height: 50px;
+  margin-bottom: 5px;
+  min-height: 20px;
 }
 
 .redes {
@@ -147,12 +167,12 @@ footer {
 }
 
 i {
-  font-size: 2.4rem;
+  font-size: 2rem;
   color: var(--texto-semi-transparente);
 }
 
 footer h4 {
-  font-size: 2.4rem;
+  font-size: 1.2rem;
   color: var(--texto-semi-transparente);
   display: flex;
   justify-content: center;
