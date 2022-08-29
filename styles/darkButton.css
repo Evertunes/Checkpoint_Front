@@ -3,12 +3,13 @@
   color: white
 }
 
-h1 {
+.dark h1 {
   color: white;
 }
 
-.card {
-  background-color: gray;
+.dark .card {
+  background-color: rgb(110, 108, 108);
+  box-shadow: 0 0 25px rgb(180, 179, 179);
 }
 
 .checkbox {
