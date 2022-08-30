@@ -58,3 +58,5 @@ const info = [
       "https://townsquare.media/site/442/files/2012/04/Yoda.jpg?w=1200&h=0&zc=1&s=0&a=t&q=89",
   },
 ];
+
+export default info

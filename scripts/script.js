@@ -1,3 +1,6 @@
+// importações
+/* import { info } from './conteudo'; */
+
 // variáveis
 const principal = document.querySelector("body");
 const formulario = document.getElementById("formulario");
