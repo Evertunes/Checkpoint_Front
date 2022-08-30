@@ -124,8 +124,8 @@ section {
   width: 40px;
   height: 40px;
   font-size: 40px;
-  color: rgb(46, 122, 223);
-  background-color: white;
+  color: white;
+  background-color:rgb(47, 47, 75);
   border-radius: 50px;
   left: 95%;
   top: 50%;
