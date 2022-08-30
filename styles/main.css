@@ -127,7 +127,7 @@ section {
   color: rgb(46, 122, 223);
   background-color: white;
   border-radius: 50px;
-  left: 93%;
+  left: 95%;
   top: 50%;
 }
 
@@ -277,7 +277,7 @@ footer h4 {
 
 @media (max-width: 428px) {
   #formulario {
-    width: 90%;
+    width: 85%;
     margin-top: 5px;
     margin-bottom: 5px;
   }
