@@ -160,14 +160,20 @@ footer h5 {
   width: 32%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.nome-aluno{
+  width: 100%;
+  height: 30px;
 }
 
 #aluno1 {
-  align-items: flex-start;
+  align-items:flex-start ;
+  text-align: left;
 }
 
 #aluno2 {
+  align-items:center; 
   text-align: center;
 }
 
@@ -179,7 +185,6 @@ footer h5 {
 .aluno h5 {
   font-size: 1.5rem;
   color: var(--cor-principal);
-  margin-bottom: 10px;
 }
 
 .aluno p {
