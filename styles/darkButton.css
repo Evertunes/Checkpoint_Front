@@ -54,6 +54,7 @@
   color: aqua;
 }
 
-.textoBranco {
-  color: white;
+.dark #top{
+  color:  white;
+  background-color:  rgb(110, 108, 108);
 }

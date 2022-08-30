@@ -119,6 +119,19 @@ section {
   padding: 20px;
 }
 
+#top {
+  text-align: center;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  color: rgb(46, 122, 223);
+  background-color: white;
+  border-radius: 50px;
+  left: 93%;
+  top: 50%;
+}
+
 footer {
   width: 100%;
   background-color: var(--cor-fundo-header-footer);
