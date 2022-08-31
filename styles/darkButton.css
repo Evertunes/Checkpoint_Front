@@ -1,6 +1,6 @@
 .dark {
   background-color: rgb(47, 47, 75);
-  color: white
+  color: white;
 }
 
 .dark h1 {
@@ -38,7 +38,7 @@
   left: 2px;
   height: 25px;
   width: 27px;
-  transform:translateX(0px);
+  transform: translateX(0px);
   transition: transform 0.2s linear;
 }
 
@@ -48,13 +48,13 @@
 
 .bi-brightness-high-fill {
   color: rgb(240, 226, 30);
- }
+}
 
 .bi-moon-fill {
   color: aqua;
 }
 
-.dark #top{
-  color:  white;
-  background-color:  rgb(146, 163, 185);
+.dark #top {
+  color: white;
+  background-color: rgb(146, 163, 185);
 }

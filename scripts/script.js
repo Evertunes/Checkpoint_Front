@@ -93,5 +93,5 @@ irParaTopo.addEventListener("click", () => {
 
 // mudar cursor para tipo 'pointer'
 irParaTopo.addEventListener("mouseover", () => {
-  irParaTopo.style.cursor = 'pointer';
+  irParaTopo.style.cursor = "pointer";
 });
