@@ -30,6 +30,7 @@ a {
 
 #dark-mode {
   padding: 20px;
+  position: fixed;
 }
 
 h1 {
@@ -38,6 +39,7 @@ h1 {
   font-size: 4rem;
   color: var(--corPrincipal);
   margin-bottom: 20px;
+  padding: 20px;
 }
 
 section {
