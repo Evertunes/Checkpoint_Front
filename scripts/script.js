@@ -19,21 +19,28 @@ const personagemContainercard = document.getElementById(
 const botaoPreencher = document.getElementById("botao-preencher");
 const botaoLimpar = document.getElementById("botao-limpar");
 const irParaTopo = document.getElementById("top");
-
 const limitar = document.getElementById("input-descricao-personagem");
 const quantidade = document.querySelector("span");
-const maximo = document.querySelector("h4");
+
+// funcões
+function limpaFormulario() {
+  inputNomePersonagem.value = null;
+  inputUrlImagem.value = null;
+  inputDescricaoPersonagem.value = null;
+  quantidade.innerText = 0;
+  inputCorSabre.value = "";
+  inputAfiliacaoPersonagem.value = null;
+}
 
 // contador de caracteres
-limitar.addEventListener ("input", e => {
-    if (limitar.value.length < 300) {  
-       quantidade.innerText = limitar.value.length;
-    } else {
-       quantidade.innerText = "max";
-       limitar.value = limitar.value.substring(0, 300);
-    }
- })
-
+limitar.addEventListener("input", () => {
+  if (limitar.value.length < 300) {
+    quantidade.innerText = limitar.value.length;
+  } else {
+    quantidade.innerText = "max";
+    limitar.value = limitar.value.substring(0, 300);
+  }
+});
 
 // cria os cards com as informações do formulário
 formulario.addEventListener("submit", (evento) => {
@@ -60,11 +67,7 @@ formulario.addEventListener("submit", (evento) => {
     `;
   }
   personagemContainercard.innerHTML += dadosPersonagem;
-  inputNomePersonagem.value = null;
-  inputUrlImagem.value = null;
-  inputDescricaoPersonagem.value = null;
-  inputCorSabre.value = "";
-  inputAfiliacaoPersonagem.value = null;
+  limpaFormulario();
   personagemContainercard.scrollIntoView();
 });
 
@@ -72,7 +75,7 @@ formulario.addEventListener("submit", (evento) => {
 botaoPreencher.addEventListener("click", () => {
   if (personagemContainercard.querySelector(".card-auto") === null) {
     infoPersonagens.forEach((array) => {
-      let dadosPersonagem = `
+      let dadosPersonagemAuto = `
     <div class="card card-auto">
       <h2 class="card-nome">${array.nome}</h2>
       <img class="card-imagem" src="${array.image}" alt="imagem do personagem"/>
@@ -81,7 +84,7 @@ botaoPreencher.addEventListener("click", () => {
       <h3 class="card-afiliacao">- Pertence a ${array.afiliacao}</h3>
       </div>
       `;
-      personagemContainercard.innerHTML += dadosPersonagem;
+      personagemContainercard.innerHTML += dadosPersonagemAuto;
     });
   } else {
     alert(`Cards automáticos já gerados!
@@ -98,6 +101,7 @@ botaoLimpar.addEventListener("click", () => {
   } else {
     personagemContainercard.innerHTML = "";
   }
+  limpaFormulario();
   principal.scrollIntoView();
 });
 
