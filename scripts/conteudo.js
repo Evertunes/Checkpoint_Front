@@ -1,4 +1,4 @@
-const info = [
+const infoPersonagens = [
   {
     nome: "Darth Vader",
     descricao:
@@ -59,4 +59,4 @@ const info = [
   },
 ];
 
-export default info;
+export default infoPersonagens;

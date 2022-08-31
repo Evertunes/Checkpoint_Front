@@ -30,14 +30,15 @@ a {
 
 #dark-mode {
   padding: 20px;
+  position: fixed;
 }
 
 h1 {
   text-align: center;
-  margin-left: 25px;
   font-size: 4rem;
   color: var(--corPrincipal);
   margin-bottom: 20px;
+  padding: 20px;
 }
 
 section {
@@ -124,11 +125,11 @@ section {
   width: 40px;
   height: 40px;
   font-size: 40px;
-  color: rgb(46, 122, 223);
-  background-color: white;
+  color: white;
+  background-color: rgb(47, 47, 75);
   border-radius: 50px;
-  left: 93%;
-  top: 50%;
+  left: 95%;
+  top: 90%;
 }
 
 footer {
@@ -141,7 +142,7 @@ footer {
   justify-content: space-around;
   align-items: center;
   padding: 20px 100px;
-  margin-top: 50px;
+  margin-top: 300px;
 }
 
 .criadores {
@@ -157,17 +158,28 @@ footer h5 {
 }
 
 .aluno {
-  width: 30%;
+  width: 32%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.nome-aluno {
+  width: 100%;
+  height: 30px;
+}
+
+.funcao-aluno {
+  width: 100%;
+  height: 40px;
 }
 
 #aluno1 {
   align-items: flex-start;
+  text-align: left;
 }
 
 #aluno2 {
+  align-items: center;
   text-align: center;
 }
 
@@ -179,7 +191,6 @@ footer h5 {
 .aluno h5 {
   font-size: 1.5rem;
   color: var(--cor-principal);
-  margin-bottom: 10px;
 }
 
 .aluno p {
@@ -207,6 +218,7 @@ footer h4 {
   align-items: center;
   margin: 10px;
   text-align: center;
+  padding-top: 20px;
 }
 
 /* Para telas de tamanhos menores, responsividade */
@@ -217,16 +229,28 @@ footer h4 {
     margin-top: 40px;
     margin-bottom: 40px;
   }
+  footer {
+    margin-top: 200px;
+  }
 }
 
 @media (max-width: 1280px) {
   html {
     font-size: 8px;
   }
+  #dark-mode {
+    position: static;
+  }
   #formulario {
     width: 70%;
     margin-top: 30px;
     margin-bottom: 30px;
+  }
+  footer {
+    padding: 10px 50px;
+  }
+  footer h4 {
+    margin: 7px;
   }
 }
 
@@ -239,12 +263,40 @@ footer h4 {
     margin-top: 10px;
     margin-bottom: 10px;
   }
+  .card {
+    width: 300px;
+    height: 500px;
+    margin: 20px;
+  }
+  footer {
+    padding: 5px 10px;
+    margin-top: 50px;
+  }
+  .criadores {
+    width: 90%;
+    height: 80%;
+  }
+  footer h4 {
+    margin: 5px;
+  }
+  #top {
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    left: 93%;
+  }
 }
 
 @media (max-width: 428px) {
   #formulario {
-    width: 95%;
+    width: 85%;
     margin-top: 5px;
     margin-bottom: 5px;
+  }
+  footer {
+    padding: 5px 5px;
+  }
+  footer h4 {
+    margin: 0px;
   }
 }
