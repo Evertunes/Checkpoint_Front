@@ -16,6 +16,21 @@ const personagemContainercard = document.getElementById(
 const botaoPreencher = document.getElementById("botao-preencher");
 const botaoLimpar = document.getElementById("botao-limpar");
 
+const limitar = document.getElementById("input-descricao-personagem");
+const quantidade = document.querySelector("span");
+const maximo = document.querySelector("h4");
+
+// contador de caracteres
+limitar.addEventListener ("input", e => {
+    if (limitar.value.length < 300) {  
+       quantidade.innerText = limitar.value.length;
+    } else {
+       quantidade.innerText = "max";
+       limitar.value = limitar.value.substring(0, 300);
+    }
+ })
+
+
 // cria os cards com as informações do formulário
 formulario.addEventListener("submit", (evento) => {
   evento.preventDefault();
